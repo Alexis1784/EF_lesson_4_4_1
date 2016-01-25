@@ -14,10 +14,11 @@ namespace EF_lesson_4_3
             Database.SetInitializer(new MyContextInitializer());
         }
         public PhoneContext()
-            : base("EF_lessonES")
+            : base("EF_lesson_4_4_1")
         { }
 
         public DbSet<Company> Companies { get; set; }
         public DbSet<Phone> Phones { get; set; }
+        public DbSet<Country> Countries { get; set; }
     }
 }

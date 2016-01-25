@@ -11,8 +11,13 @@ namespace EF_lesson_4_3
     {
         protected override void Seed(PhoneContext db)
         {
-            Company c1 = new Company { Name = "Samsung" };
-            Company c2 = new Company { Name = "Apple" };
+            Country cn1 = new Country { Name = "US" };
+            Country cn2 = new Country { Name = "South Corea" };
+            db.Countries.Add(cn1);
+            db.Countries.Add(cn2);
+
+            Company c1 = new Company { Name = "Samsung", Country = cn2 };
+            Company c2 = new Company { Name = "Apple", Country = cn1 };
             db.Companies.Add(c1);
             db.Companies.Add(c2);
 
